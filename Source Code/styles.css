@@ -1,0 +1,141 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  overflow: hidden;
+}
+
+/* Container styles */
+.container {
+  position: relative;
+  width: 400px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  padding: 40px;
+  transition: all 0.5s ease;
+}
+
+/* Background overlay (optional) */
+.background {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* Forms container */
+.forms-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Forms wrapper for animation */
+.forms {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Individual form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s ease;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Titles & subtitles */
+.title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #333;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+  color: #555;
+  text-align: center;
+}
+
+/* Input groups */
+.input-group {
+  margin-bottom: 1em;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #6c63ff;
+}
+
+/* Buttons */
+.btn {
+  background: #6c63ff;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #5750d9;
+  transform: translateY(-2px);
+}
+
+/* Switch text & links */
+.switch-text {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.switch {
+  color: #6c63ff;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.switch:hover {
+  color: #5750d9;
+}
